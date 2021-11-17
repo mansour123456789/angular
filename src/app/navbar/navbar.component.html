@@ -1,0 +1,46 @@
+
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" routerLink="/"><h2>Travel  <em>Agency</em></h2></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                </li> 
+
+                <li class="nav-item"  *ngIf="service.valide"><a class="nav-link" routerLink="/hotel">Hotel</a></li>
+
+                <li class="nav-item"  *ngIf="service.valide2"><a class="nav-link" routerLink="/hotel">Hotel</a></li>
+                <li class="nav-item dropdown" *ngIf="service.valide1">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown"  role="button" aria-haspopup="true" aria-expanded="false">Hotel</a>
+                  
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" routerLink="/hotel">consulter</a>
+                    <a class="dropdown-item" routerLink="/ajouter">add Hotel</a>
+                    <a class="dropdown-item" routerLink="/consulter">gerée Hotel</a>
+                  </div>
+              </li>
+
+                <li class="nav-item"><a class="nav-link" routerLink="#">Vol</a></li>
+
+                <li class="nav-item"><a class="nav-link" routerLink="#">Vecul</a></li>
+
+               
+              
+                <li class="nav-item"><a  *ngIf="!service.isloggedIn"class="nav-link" routerLink="/connect">Login</a>
+                  <a  *ngIf="service.isloggedIn"class="nav-link" routerLink="/connect" (click) = "onLogout()" >Logout</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  

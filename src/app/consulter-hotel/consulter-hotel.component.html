@@ -1,0 +1,29 @@
+
+<div style="margin: 10%;">
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">image</th>
+      <th scope="col">nom d'hotel</th>
+      <th scope="col">adresse</th>
+      <th scope="col">telephon</th>
+      <th scope="col">prix</th>
+      <th scope="col" style="text-align: center;">Update/Delete/View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let hotel of hotels;index as i">
+      
+      <td>{{hotel.image}}</td>
+      <td>{{hotel.nom_hotel}}</td>
+      <td>{{hotel.adresse_hotel}}</td>
+      <td>{{hotel.tel}}</td>
+      <td>{{hotel.prix}}</td>
+      <td style="text-align: center;">                <button (click) = "updateEmployee(hotel.id_hotel)" class = "btn btn-info"> Update</button>
+        <button (click) = "deletehotel(hotel.id_hotel)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+        <button (click) = "employeeDetails(hotel.id_hotel)" class = "btn btn-info" style="margin-left: 10px"> View</button></td>
+    </tr>
+  
+  </tbody>
+</table></div>
