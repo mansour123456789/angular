@@ -17,94 +17,30 @@
     <div class="products">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+
+
+
+
+
+
+
+
+          <div class="col-md-4"  *ngFor="let hotel of hotels">
             <div class="product-item">
-              <a routerLink="/detail"><img src="assets/images/product-1-370x270.jpg" alt=""></a>
+              <a  (click)="detail(hotel.id_hotel)"><img src="assets/images/{{hotel.image}}" alt=""></a>
               <div class="down-content">
-                <a routerLink="/detail"><h4>Limelight Lodge</h4></a>
+                <a (click)="detail(hotel.id_hotel)"><h4>{{hotel.nom_hotel}}</h4></a>
 
-                <h6>$300 - $400</h6>
+                <h6>${{hotel.prix}}</h6>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
+                <p>{{hotel.discription}}</p>
 
               
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="product-item">
-              <a routerLink="/detail"><img src="assets/images/product-2-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a routerLink="/detail"><h4>Limelight Lodge</h4></a>
-
-                <h6>$300 - $400</h6>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
-
-               
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a routerLink="/detail"><img src="assets/images/product-3-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a routerLink="/detail"><h4>Limelight Lodge</h4></a>
-
-                <h6>$300 - $400</h6>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
-
-               
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a routerLink="/detail"><img src="assets/images/product-4-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a routerLink="/detail"><h4>Limelight Lodge</h4></a>
-
-                <h6>$300 - $400</h6>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
-
-              
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a href="/detail"><img src="assets/images/product-5-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a routerLink="/detail"><h4>Limelight Lodge</h4></a>
-
-                <h6>$300 - $400</h6>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
-
-              
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="product-item">
-              <a routerLink="/detail"><img src="assets/images/product-6-370x270.jpg" alt=""></a>
-              <div class="down-content">
-                <a routerLink="/detail"><h4>Limelight Lodge</h4></a>
-
-                <h6>$300 - $400</h6>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum incidunt, aperiam nostrum et. Voluptas vel labore numqua.</p>
-
-              </div>
-            </div>
-          </div>
+      
 
           <div class="col-md-12">
             <ul class="pages">

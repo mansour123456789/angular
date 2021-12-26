@@ -30,4 +30,17 @@ export class NavbarComponent implements OnInit {
            return false;
         }
   }
+
+  onLogout(){
+    this.service.valide=true;
+    this.service.valide1=false;
+    this.service.valide2=false;
+    this.service.loggedUser="";
+    this.service.roles=5;
+    sessionStorage.setItem('loggedUser','');
+    sessionStorage.setItem('isloggedIn','');
+    sessionStorage.setItem('role', '');
+
+  }
+
 }

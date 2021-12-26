@@ -22,60 +22,74 @@
           <h2>add hotel</h2>
         </div>
       </div>
+      <form  #hotelform="ngForm" (ngSubmit)="registerhotell()">
       <div class="col-md-8">
         <div class="contact-form">
-          <form id="contact" action="" method="post">
+          <div class="col-md-4">
+            <h5 class="text-center" style="margin-top: 15px;">image for hotel</h5>
+<img src="assets/images/product-4-370x270.jpg" class="img-fluid" alt="">
+            <input type="file"  (change)="onchange($event)">
+           
+          </div>
+          <br><br><br>
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <fieldset>
-                  <input name="name" type="text" class="form-control" id="name" placeholder=" Name hotel" required="">
+                  <input name="name" type="text" class="form-control" id="name" [(ngModel)]="hotel.nom_hotel" placeholder=" Name hotel" required="">
                 </fieldset>
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <fieldset>
-                  <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail hotel" required="">
+                  <input name="nb" type="number" class="form-control" id="nb" [(ngModel)]="hotel.nb" placeholder=" nombre d'etoil" required="">
                 </fieldset>
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <fieldset>
-                  <input name="subject" type="text" class="form-control" id="adress" placeholder="address hotel" required="">
+                  <input name="email" type="email" class="form-control" id="email" [(ngModel)]="hotel.email" placeholder="E-Mail hotel" required="">
                 </fieldset>
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <fieldset>
-                  <input name="subject" type="text" class="form-control" id="subject" placeholder="telephon" required="">
+                  <input name="subject" type="text" class="form-control" id="adress" [(ngModel)]="hotel.adresse_hotel" placeholder="address hotel" required="">
                 </fieldset>
               </div>
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <fieldset>
-                  <input name="subject" type="number" class="form-control" id="subject" placeholder="pris " required="">
+                  <input name="subject" type="text" class="form-control" id="tel" [(ngModel)]="hotel.tel" placeholder="telephon" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <fieldset>
+                  <input name="subject" type="number" class="form-control" id="subject" [(ngModel)]="hotel.prix" placeholder="prix " required="">
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="chech'in" required=""></textarea>
+                  <textarea name="message" rows="6" class="form-control" id="checkin" [(ngModel)]="hotel.checkin" placeholder="chech'in" required=""></textarea>
                 </fieldset>
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="chech'out" required=""></textarea>
+                  <textarea name="message" rows="6" class="form-control" id="checkout" [(ngModel)]="hotel.checkout" placeholder="chech'out" required=""></textarea>
                 </fieldset>
               </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="discription" rows="6" class="form-control" id="checkout" [(ngModel)]="hotel.discription" placeholder="discription" required=""></textarea>
+                </fieldset>
+              </div>
+            
               <div class="col-lg-12">
                 <fieldset>
                   <button type="submit" id="form-submit" class="filled-button">Send Message</button>
                 </fieldset>
               </div>
             </div>
-          </form>
+         
         </div>
       </div>
-               <br><br>
-      <div class="col-md-4">
-        <img src="assets/images/product-4-370x270.jpg" class="img-fluid" alt="">
-        <input type="file">
-        <h5 class="text-center" style="margin-top: 15px;">image for hotel</h5>
-      </div>
-    </div>
-  </div>
-</div>
+      <br><br>
+    
+
+    </form>
+               

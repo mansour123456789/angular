@@ -16,7 +16,7 @@ const Routes:Routes=[
   {path:"",component:HommeComponent},
   {path:"hotel",component:HotelComponent},
   {path:"connect",component:LoginComponent},
-  {path:"detail",component:HotelDetailComponent},
+  {path:'detail/:id',component:HotelDetailComponent},
   {path:"ajouter",component:AjoutHotelComponent},
   {path:"register",component:RegisterComponent},
   {path:"consulter",component:ConsulterHotelComponent},

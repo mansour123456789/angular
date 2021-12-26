@@ -9,4 +9,7 @@ export class Hotel {
      checkin:string;
      checkout:string;
      prix:number;
+     discription:string;
+     nb:number;
+     x:File;
 }

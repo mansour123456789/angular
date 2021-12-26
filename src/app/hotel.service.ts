@@ -8,24 +8,28 @@ import { Hotel } from './hotel';
   providedIn: 'root'
 })
 export class HotelService {
+hotel =new Hotel();
 
   constructor(private httpClient: HttpClient, private router: Router) { }
 
+  private baseURL = "http://localhost:8080/delet";
+  
+  private baseURLl = "http://localhost:8088/find";
 
-
-  public registerhotel(hotel: Hotel) {
-    return this.httpClient.post<any>("http://localhost:8088/hotel", Hotel)
+  public registerhotel(hotel: Hotel): Observable<any> {
+    
+    return this.httpClient.post<any>("http://localhost:8088/hotell", hotel  );
   }
 
   public showallhotel():Observable<Hotel[]>{
-    return this.httpClient.get<Hotel[]>("http://localhost:8088/hotel")
+    return this.httpClient.get<Hotel[]>("http://localhost:8088/hotel");
   }
 
   public deleithotel(id:number){
-    return this.httpClient.delete('http://localhost:8088/delet/');
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
-  public findhotelbyId(id:number) {
-    return this.httpClient.get("http://localhost:8088/hotel/'id'");
+  public findhotelbyId(id:number):Observable<Hotel> {
+    return this.httpClient.get<Hotel>(`${this.baseURLl}/${id}`);
   }
 
 

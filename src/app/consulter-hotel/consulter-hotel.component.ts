@@ -15,6 +15,8 @@ hotels:Hotel[];
 
   ngOnInit():void {
 this.gethotel();
+document.body.scrollTop=0;
+document.documentElement.scrollTop=0;
   }
 
 
@@ -27,18 +29,20 @@ data =>{ this.hotels = data;});
 
 
 employeeDetails(id: number){
-  this.router.navigate(['hotel-details', id]);
+
+  this.router.navigate(['detail', id]);
 }
 
 updatehotel(id: number){
-  this.router.navigate(['updatepage nbadel feha', id]);
+  this.router.navigate(['updatepage', id]);
 }
 
 deletehotel(id: number){
   this.service.deleithotel(id).subscribe( data => {
-    console.log(data);
     this.gethotel();
-  })
+   
+  });
+
 }
 
 

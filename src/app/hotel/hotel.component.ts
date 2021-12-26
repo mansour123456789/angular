@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Hotel } from '../hotel';
+import { HotelService } from '../hotel.service';
 
 @Component({
   selector: 'app-hotel',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hotel.component.css']
 })
 export class HotelComponent implements OnInit {
-
-  constructor() { }
+  hotels:Hotel[];
+  constructor(private service:HotelService,private router : Router) { }
 
   ngOnInit() {
+    document.body.scrollTop=0;
+    document.documentElement.scrollTop=0;
+      this.service.showallhotel().subscribe(
+      
+      data =>{ this.hotels = data;});
+      
+     
+  }
+ 
+  detail(id:number){
+this.router.navigate(['detail', id]);
+
   }
 
 }
