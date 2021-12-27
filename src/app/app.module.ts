@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { ConsulterHotelComponent } from './consulter-hotel/consulter-hotel.component';
 import { AjoutHotelComponent } from './ajout-hotel/ajout-hotel.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ConsulterHotelComponent,
     AjoutHotelComponent,
     NavbarComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,

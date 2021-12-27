@@ -18,7 +18,7 @@ export class HotelComponent implements OnInit {
       this.service.showallhotel().subscribe(
       
       data =>{ this.hotels = data;});
-      
+      document.body.style.backgroundColor="rgb(155, 155, 155)";
      
   }
  

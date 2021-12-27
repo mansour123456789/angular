@@ -20,6 +20,7 @@ name="hotel";
   constructor(private service:UserService,private service2:ReservationService,private router :ActivatedRoute,private servicee:HotelService,private routerr : Router) { }
 
   ngOnInit() {
+    
     this.id = this.router.snapshot.params['id'];
     this.hotel=new Hotel();
     this.servicee.findhotelbyId(this.id).subscribe( data => { this.hotel= data; });
