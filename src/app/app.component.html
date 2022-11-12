@@ -1,6 +1,13 @@
 
-<app-navbar></app-navbar>
-<br><br><br>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div *ngIf="j!=0">       <!-- START PAGE CONTAINER -->
+      <app-navbar></app-navbar>
+
+</div>
+
+
+
+<div *ngIf="j==0">       <!-- START PAGE CONTAINER -->
+    <router-outlet></router-outlet>
+</div>
+
 

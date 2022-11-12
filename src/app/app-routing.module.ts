@@ -3,24 +3,22 @@ import { CommonModule } from '@angular/common';
 import { Routes ,RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HommeComponent } from './homme/homme.component';
-import { HotelDetailComponent } from './hotel-detail/hotel-detail.component';
-import { HotelComponent } from './hotel/hotel.component';
+import { ListpresedantComponent } from './listpresedant/listpresedant.component';
+import { MessageComponent } from './message/message.component';
+import { DateeventComponent } from './dateevent/dateevent.component';
+import { FormAjoutClubComponent } from './form-ajout-club/form-ajout-club.component';
 import { RegisterComponent } from './register/register.component';
-import { AjoutHotelComponent } from './ajout-hotel/ajout-hotel.component';
-import { ConsulterHotelComponent } from './consulter-hotel/consulter-hotel.component';
 
-
-
+  
 
 const Routes:Routes=[
-  {path:"",component:HommeComponent},
-  {path:"hotel",component:HotelComponent},
-  {path:"connect",component:LoginComponent},
-  {path:'detail/:id',component:HotelDetailComponent},
-  {path:"ajouter",component:AjoutHotelComponent},
+  {path:"",component:LoginComponent},
+  {path:"homme",component:HommeComponent},
+  {path:"list",component:ListpresedantComponent},
+  {path:"message",component:MessageComponent},
+  {path:"date",component:DateeventComponent},
+  {path:"ajoute",component:FormAjoutClubComponent},
   {path:"register",component:RegisterComponent},
-  {path:"consulter",component:ConsulterHotelComponent},
-
 
 ];
 

@@ -1,0 +1,76 @@
+  
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap">
+                
+                  <div class="row">
+                      <div class="col-md-12">
+                          
+                          <form class="form-horizontal" #hotelform="ngForm" (ngSubmit)="ajouerclub(club)">
+                          <div class="panel panel-default">
+                              <div class="panel-heading">
+                                  <h3 class="panel-title"><strong>anvoyer</strong> un demande</h3>
+                                  <ul class="panel-controls">
+                                      <li><a href="#" class="panel-remove"><span class="fa fa-times"></span></a></li>
+                                  </ul>
+                              </div>
+                              <div class="panel-body form-group-separated">
+                                  
+                                  <div class="form-group">
+                                      <label class="col-md-3 col-xs-12 control-label">Name de club</label>
+                                      <div class="col-md-6 col-xs-12">                                            
+                                          <div class="input-group">
+                                              <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                            
+                                              <input name="name" type="text" class="form-control" id="name" [(ngModel)]="club.nameclub" placeholder="Full Name" required="">
+                                          </div>                                            
+                                          <span class="help-block">This is sample of text field</span>
+                                      </div>
+                                  </div>
+                                  
+                                
+                                  
+                                  <div class="form-group">                                        
+                                      <label class="col-md-3 col-xs-12 control-label">description</label>
+                                      <div class="col-md-6 col-xs-12">
+                                          <div class="input-group">
+                                              <span class="input-group-addon"><span class="fa fa-calendar"></span></span>
+                                        
+                                              <input name="name" type="text" class="form-control" id="name" [(ngModel)]="club.desc" placeholder="Full Name" required="">
+                                        
+                                                               </div>
+                                          <span class="help-block">Click on input field to get datepicker</span>
+                                      </div>
+                                  </div>
+                            
+                                  
+                                  <div class="form-group">
+                                      <label class="col-md-3 col-xs-12 control-label">logo</label>
+                                      <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                          <input type="file" class="fileinput btn-primary" name="filename" id="filename" title="Browse file"  [(ngModel)]="club.image"/>
+                                          <span class="help-block">Input type file</span>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="form-group">
+                                      <label class="col-md-3 col-xs-12 control-label">Checkbox</label>
+                                      <div class="col-md-6 col-xs-12">                                                                                                                                        
+                                          <label class="check"><input type="checkbox" class="icheckbox" checked="checked"/> Checkbox title</label>
+                                          <span class="help-block">Checkbox sample, easy to use</span>
+                                      </div>
+                                  </div>
+
+                              </div>
+                          
+                              <div class="panel-footer">
+                                  <button class="btn btn-default">Clear Form</button>                                    
+                                  <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                              </div>
+                          </div>
+                          </form>
+                          
+                      </div>
+                  </div>                    
+                  
+              </div>
+              <!-- END PAGE CONTENT WRAPPER -->                                                
+       

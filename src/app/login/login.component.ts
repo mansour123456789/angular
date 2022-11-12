@@ -1,52 +1,40 @@
-import { APP_BOOTSTRAP_LISTENER, Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppComponent } from '../app.component';
+import { Etudiant } from '../Entity/etudiant';
+import { LoginService } from '../service/login.service';
 
-import { NgForm } from '@angular/forms';
-import { User } from '../user';
-import { Route, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public users:Observable<any>;
-  user =new User();
-public  role:number;
-  constructor(private service:UserService,private router :Router) { }
+  user=new Etudiant();
+  public  x:string;
+  constructor(private service:LoginService,private a:AppComponent,private router :Router) { }
 
   ngOnInit() {
-    document.body.scrollTop=0;
-    document.documentElement.scrollTop=0;
   }
- 
+
 
   
+  
   loginUser(){
-    
-     this.users= this.service.loginuser(this.user);
-     this.service.SignIn(this.users);
-     this.service.loginuser(this.user).subscribe(
+   
+    this.service.loginuser(this.user).subscribe(
       
       data=> {
+     
+        alert("les valid"+this.user.name);
         
-        console.log(data.role);
-       
-        console.log(this.service.valide);
-        console.log(this.service.valide1);
-        console.log(this.service.valide2);
-       
-        
-      /* this.router.navigate(['/'])*/
-
+     this.router.navigate(['/homme']);
+this.a.j=1;
       /*this.router.navigate(['/'])*/
       },
     
        error=> {console.log("jknkllk")
-       alert("les cordonner non valid");
+       alert("les cordonner non valid"+this.user);
   });
-      
-     
-    }
+  }
 }
